@@ -3,7 +3,7 @@ package com.Address_Book;
 import java.util.ArrayList;
 import java.util.*;
 
- public class PersonsDetails {
+  class PersonsDetails {
     private String firstName, lastName, address, city, state, emailId;
     private long zipCode;
     private long phoneNumber;
@@ -83,48 +83,7 @@ import java.util.*;
     }
 }
 
-class AddressBookDirectory {
-    public static ArrayList<PersonsDetails> record = new ArrayList<PersonsDetails>();
-    public static void main(String[] args) {
-        AddressBook addressBook = new AddressBook();
-        System.out.println("--------------WELCOME TO ADDRESS BOOK-------------");
-        addressBook.createNewContact(record);
-    }
-}
-class AddressBook extends AddressBookDirectory {
-    public static void createNewContact(ArrayList<PersonsDetails> record) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println(" create new contact");
-        System.out.println("Enter your Firstname : ");
-        String firstName = sc.nextLine();
-        System.out.println("Enter your Lastname : ");
-        String lastName = sc.nextLine();
-        System.out.println("Enter your Address : ");
-        String address = sc.nextLine();
-        System.out.println("Enter your City : ");
-        String city = sc.nextLine();
-        System.out.println("Enter your State : ");
-        String state = sc.nextLine();
-        System.out.println("Enter your EmailId : ");
-        String emailId = sc.nextLine();
-        System.out.println("Enter your Zip : ");
-        long zipCode = sc.nextLong();
-        System.out.println("Enter your Phone Number : ");
-        long phoneNumber = sc.nextLong();
-        record.add(new PersonsDetails(firstName, lastName, address, city, state, emailId, zipCode, phoneNumber));
-        for (int i = 0; i < record.size(); i++) {
-            System.out.println(" person contact details : ");
-            System.out.println("FirstName : " + record.get(i).getfirstName());
-            System.out.println(" LastName : " + record.get(i).getlastName());
-            System.out.println(" Address : " + record.get(i).getAddress());
-            System.out.println(" City : " + record.get(i).getCity());
-            System.out.println(" State : " + record.get(i).getState());
-            System.out.println(" emailId : " + record.get(i).getemailId());
-            System.out.println(" ZipCode : " + record.get(i).getzipCode());
-            System.out.println(" PhoneNumber : " + record.get(i).getphoneNumber());
-        }
-    }
-}
+
 
 
 
